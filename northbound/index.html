@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northbound Roofing — Roof repair and replacement in Central Massachusetts</title>
+<meta name="description" content="Roof repair, replacement and gutters across 22 towns in Central Massachusetts. Free inspections, written quotes in 48 hours, 25-year workmanship warranty.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="design-system/tokens.css">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--body);color:var(--ink);background:#fff;font-size:1.0625rem;line-height:1.6}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--copper-2);outline-offset:3px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:var(--head);font-stretch:78%;font-weight:800;line-height:1.02;letter-spacing:-.005em}
+
+  .bar{background:var(--slate);color:#E3EAEF;font-size:.92rem}
+  .bar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+  .top{border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:5}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--head);font-stretch:78%;font-weight:800;font-size:1.45rem}
+  .logo svg{width:34px;height:34px}
+  .nav{display:flex;align-items:center;gap:28px;font-weight:500;font-size:.98rem}
+  .nav a{text-decoration:none}
+  .call{display:flex;flex-direction:column;align-items:flex-end;line-height:1.15}
+  .call small{color:var(--muted);font-size:.8rem}
+  .call a{font-family:var(--head);font-stretch:78%;font-weight:800;font-size:1.45rem;text-decoration:none;color:var(--copper)}
+  @media (max-width:900px){.nav .links{display:none}}
+
+  .btn{display:inline-block;background:var(--copper);color:#fff;font-weight:600;text-decoration:none;padding:14px 24px;border-radius:6px;border:0;font:inherit;font-weight:600;cursor:pointer}
+  .btn:hover{background:var(--copper-2)}
+
+  .hero{background:var(--mist)}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;padding-top:80px;padding-bottom:88px;align-items:start}
+  .hero h1{font-size:clamp(2.8rem,6.2vw,5rem)}
+  .hero p.lede{font-size:1.2rem;color:#35444F;margin:24px 0 32px;max-width:46ch}
+  .proof{display:flex;gap:36px;flex-wrap:wrap;margin-top:40px;padding-top:28px;border-top:1px solid var(--line)}
+  .proof div{font-size:.95rem;color:var(--muted);max-width:16ch}
+  .proof strong{display:block;font-family:var(--head);font-stretch:78%;font-size:2rem;color:var(--slate);font-weight:800}
+
+  form.quote{background:#fff;border:1px solid var(--line);border-top:6px solid var(--copper);border-radius:8px;padding:30px;box-shadow:0 18px 40px -24px rgba(30,43,54,.45)}
+  form.quote h2{font-size:1.75rem;margin-bottom:6px}
+  form.quote p{color:var(--muted);font-size:.95rem;margin-bottom:18px}
+  label{display:block;font-weight:600;font-size:.92rem;margin:14px 0 6px}
+  input,select,textarea{width:100%;font:inherit;padding:12px 14px;border:1px solid #B9C5CD;border-radius:6px;background:#fff;color:var(--ink)}
+  textarea{min-height:88px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--copper-2);border-color:var(--copper-2)}
+  form.quote .btn{width:100%;margin-top:20px;font-size:1.05rem}
+  form.quote .fine{font-size:.85rem;margin:12px 0 0;text-align:center}
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:48px}}
+
+  section{padding:96px 0}
+  .services .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+  .services h2,.process h2,.area h2,.jobs h2{font-size:clamp(2.1rem,4vw,3rem)}
+  .services .intro p{color:var(--muted);margin-top:18px;max-width:38ch}
+  .svc{display:grid;grid-template-columns:1fr auto;gap:6px 28px;padding:26px 0;border-top:1px solid var(--line)}
+  .svc:last-child{border-bottom:1px solid var(--line)}
+  .svc h3{font-size:1.55rem}
+  .svc .from{font-weight:600;color:var(--copper);white-space:nowrap}
+  .svc p{grid-column:1/-1;color:#3D4C57;max-width:62ch}
+  @media (max-width:860px){.services .wrap{grid-template-columns:1fr;gap:28px}}
+
+  .process{background:var(--slate);color:#E6ECF0}
+  .process ol{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:48px;counter-reset:s}
+  .process li{counter-increment:s;border-top:2px solid var(--copper-2);padding-top:18px}
+  .process li::before{content:"Step " counter(s);display:block;color:#F0A56E;font-weight:600;font-size:.92rem;margin-bottom:8px}
+  .process li strong{display:block;font-family:var(--head);font-stretch:78%;font-weight:800;font-size:1.35rem;color:#fff;margin-bottom:8px}
+  .process li span{color:#B9C6CF;font-size:.98rem}
+  @media (max-width:860px){.process ol{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.process ol{grid-template-columns:1fr}}
+
+  .area .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+  .area p{color:var(--muted);margin-top:18px;max-width:40ch}
+  .towns{columns:3;column-gap:28px;list-style:none;font-size:1rem}
+  .towns li{padding:8px 0;border-bottom:1px solid var(--line);break-inside:avoid;display:flex;justify-content:space-between;gap:8px}
+  .towns li span{color:var(--muted);font-size:.88rem;white-space:nowrap}
+  @media (max-width:860px){.area .wrap{grid-template-columns:1fr}.towns{columns:2}}
+
+  .jobs{background:var(--mist)}
+  table.recent{width:100%;border-collapse:collapse;margin-top:36px;background:#fff;border-radius:8px;overflow:hidden}
+  .recent th,.recent td{text-align:left;padding:16px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+  .recent th{font-size:.9rem;color:var(--muted);font-weight:600;background:#F7F9FA}
+  .recent td.q{color:#35444F;font-style:italic}
+  @media (max-width:760px){.recent .hide-sm{display:none}}
+
+  .cta{background:var(--copper);color:#fff;padding:72px 0}
+  .cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+  .cta h2{font-size:clamp(2rem,4vw,3rem)}
+  .cta a.num{font-family:var(--head);font-stretch:78%;font-weight:800;font-size:clamp(2rem,4vw,3rem);color:#fff;text-decoration:none;border-bottom:3px solid rgba(255,255,255,.5)}
+
+  footer{background:var(--slate);color:#AFBDC7;padding:44px 0;font-size:.92rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="bar"><div class="wrap"><span>Storm damage? Emergency tarping, 7 days a week.</span><span>Free inspections across Central Massachusetts</span></div></div>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><path d="M3 20 L17 7 L31 20" fill="none" stroke="#A9581F" stroke-width="4" stroke-linejoin="round"/><path d="M8 19 V29 H26 V19" fill="none" stroke="#1E2B36" stroke-width="3"/></svg>
+      Northbound Roofing
+    </a>
+    <nav class="nav" aria-label="Main">
+      <span class="links" style="display:flex;gap:28px">
+        <a href="#services">Services</a><a href="#area">Towns we cover</a><a href="#jobs">Recent jobs</a>
+      </span>
+      <div class="call"><small>Call or text</small><a href="tel:+15085550187">(508) 555-0187</a></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding:0" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div>
+      <h1 id="hero-title">Leaks fixed. Roofs replaced. Written quote in 48 hours.</h1>
+      <p class="lede">We're a family-owned roofing crew from Shrewsbury. We inspect the roof ourselves, send photos of what we found, and give you a price before any work starts.</p>
+      <a class="btn" href="#quote">Book a free inspection</a>
+      <div class="proof">
+        <div><strong>1,400+</strong>roofs since 2008</div>
+        <div><strong>25 yrs</strong>workmanship warranty</div>
+        <div><strong>4.9</strong>average from 380 Google reviews</div>
+      </div>
+    </div>
+    <form class="quote" id="quote" onsubmit="event.preventDefault();this.querySelector('.fine').textContent='Thanks — this is a demo form, so nothing was sent.';">
+      <h2>Free roof inspection</h2>
+      <p>We'll call within one business day to set a time.</p>
+      <label for="n">Name</label><input id="n" name="name" autocomplete="name" required>
+      <label for="p">Phone</label><input id="p" name="phone" type="tel" autocomplete="tel" required>
+      <label for="t">Town</label>
+      <select id="t" name="town"><option>Worcester</option><option>Shrewsbury</option><option>Westborough</option><option>Grafton</option><option>Holden</option><option>Another town</option></select>
+      <label for="w">What's going on?</label><textarea id="w" name="details" placeholder="Water stain on the bedroom ceiling after last week's storm"></textarea>
+      <button class="btn" type="submit">Request my inspection</button>
+      <p class="fine">No cost and no obligation.</p>
+    </form>
+  </div>
+</section>
+
+<section class="services" id="services" aria-labelledby="svc-title">
+  <div class="wrap">
+    <div class="intro">
+      <h2 id="svc-title">What we do</h2>
+      <p>Asphalt, metal and flat roofs on homes and small commercial buildings. No subcontractors: the crew that quotes the job does the job.</p>
+    </div>
+    <div>
+      <div class="svc"><h3>Roof replacement</h3><span class="from">From $11,500</span><p>Full tear-off down to the deck, ice and water shield on every edge, and architectural shingles from GAF or Owens Corning. Most homes take 1 to 2 days.</p></div>
+      <div class="svc"><h3>Leak repair</h3><span class="from">From $350</span><p>We find where the water is actually getting in. It's usually the flashing around a chimney, vent or skylight, not the shingles.</p></div>
+      <div class="svc"><h3>Storm damage &amp; insurance</h3><span class="from">Free assessment</span><p>Same-week tarping, photo documentation for your adjuster, and repairs billed directly to your insurer when your policy allows.</p></div>
+      <div class="svc"><h3>Gutters &amp; ice dams</h3><span class="from">From $9 / ft</span><p>Seamless aluminum gutters, guards, and heat cable for the north-facing eaves that dam up every February.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="process" aria-labelledby="proc-title">
+  <div class="wrap">
+    <h2 id="proc-title">How a job goes</h2>
+    <ol>
+      <li><strong>Inspection</strong><span>An owner climbs the roof and the attic. About 45 minutes.</span></li>
+      <li><strong>Photos &amp; quote</strong><span>You get photos of every problem and a fixed price within 48 hours.</span></li>
+      <li><strong>The work</strong><span>We protect your landscaping, then sweep the yard for nails with a magnet.</span></li>
+      <li><strong>Warranty</strong><span>Your 25-year workmanship warranty arrives by email the same week.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="area" id="area" aria-labelledby="area-title">
+  <div class="wrap">
+    <div>
+      <h2 id="area-title">Towns we cover</h2>
+      <p>We stay within about 30 minutes of our yard in Shrewsbury so we can get back fast if anything needs attention.</p>
+    </div>
+    <ul class="towns">
+      <li>Worcester <span>same week</span></li><li>Shrewsbury <span>same week</span></li><li>Westborough <span>same week</span></li>
+      <li>Grafton <span>same week</span></li><li>Northborough <span>same week</span></li><li>Boylston <span>same week</span></li>
+      <li>Holden <span>same week</span></li><li>Millbury <span>same week</span></li><li>Auburn <span>same week</span></li>
+      <li>Leicester <span>1–2 weeks</span></li><li>Paxton <span>1–2 weeks</span></li><li>Sutton <span>1–2 weeks</span></li>
+      <li>Upton <span>1–2 weeks</span></li><li>Hopkinton <span>1–2 weeks</span></li><li>Southborough <span>1–2 weeks</span></li>
+      <li>Marlborough <span>1–2 weeks</span></li><li>Berlin <span>1–2 weeks</span></li><li>West Boylston <span>1–2 weeks</span></li>
+      <li>Sterling <span>1–2 weeks</span></li><li>Oxford <span>1–2 weeks</span></li><li>Northbridge <span>1–2 weeks</span></li>
+      <li>Rutland <span>1–2 weeks</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="jobs" id="jobs" aria-labelledby="jobs-title">
+  <div class="wrap">
+    <h2 id="jobs-title">Recent jobs</h2>
+    <table class="recent">
+      <thead><tr><th>Town</th><th>Job</th><th class="hide-sm">Time on site</th><th>What the owner said</th></tr></thead>
+      <tbody>
+        <tr><td>Holden</td><td>Full replacement, 32 squares</td><td class="hide-sm">2 days</td><td class="q">"They found rot two other roofers missed and still came in under their quotes."</td></tr>
+        <tr><td>Worcester</td><td>Chimney flashing leak</td><td class="hide-sm">4 hours</td><td class="q">"Sent me photos from the roof before touching anything. Dry since March."</td></tr>
+        <tr><td>Grafton</td><td>Storm damage, insurance claim</td><td class="hide-sm">1 day</td><td class="q">"Tarped the same night and handled the whole adjuster visit."</td></tr>
+        <tr><td>Westborough</td><td>Gutters and heat cable</td><td class="hide-sm">1 day</td><td class="q">"First winter in ten years with no ice dams."</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="cta" aria-labelledby="cta-title">
+  <div class="wrap">
+    <h2 id="cta-title">Water coming in right now?</h2>
+    <a class="num" href="tel:+15085550187">(508) 555-0187</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Northbound Roofing, Shrewsbury, MA. Fully insured.</span>
+    <span>Concept site designed by <a href="../">Jean Berrios-Marquez</a>. Northbound Roofing is a fictional business, and its reviews and figures are sample content.</span>
+  </div>
+</footer>
+</body>
+</html>

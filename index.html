@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jean Berrios-Marquez — Websites for small businesses, built secure</title>
+<meta name="description" content="Web design and WordPress builds for small businesses, with security built in. Portfolio of concept sites and open-source WordPress security contributions. English, Spanish, Portuguese.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#F6F7F9;--ink:#141A22;--muted:#58626F;--line:#DCE1E7;--cobalt:#2944C9;--cobalt-2:#3A57E0;
+        --head:"Bricolage Grotesque",system-ui,sans-serif;--body:"Source Sans 3",system-ui,sans-serif}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--body);background:var(--bg);color:var(--ink);font-size:1.125rem;line-height:1.6}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--cobalt);outline-offset:3px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:var(--head);line-height:1.02;letter-spacing:-.02em}
+  .top .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
+  .top b{font-family:var(--head);font-weight:700;font-size:1.15rem}
+  .top nav{display:flex;gap:26px;font-size:1rem}
+  .top nav a{text-decoration:none;color:var(--muted)}
+  .top nav a:hover{color:var(--ink)}
+  @media (max-width:640px){.top nav a:not(:last-child){display:none}}
+
+  .intro{padding:72px 0 88px}
+  .intro h1{font-size:clamp(2.8rem,7vw,5.6rem);font-weight:800;max-width:14ch}
+  .intro p{font-size:1.3rem;color:#36404C;max-width:52ch;margin-top:28px}
+  .intro .meta{display:flex;gap:40px;flex-wrap:wrap;margin-top:40px;color:var(--muted);font-size:1rem}
+  .intro .meta strong{display:block;color:var(--ink);font-weight:600}
+
+  .btn{display:inline-block;background:var(--cobalt);color:#fff;text-decoration:none;font-weight:600;padding:13px 22px;border-radius:8px}
+  .btn:hover{background:var(--cobalt-2)}
+
+  section.work{padding:24px 0 96px}
+  .sec-h{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;padding-bottom:20px;border-bottom:2px solid var(--ink);margin-bottom:56px}
+  .sec-h h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:700}
+  .sec-h p{color:var(--muted);max-width:48ch}
+  .project{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center;margin-bottom:88px}
+  .project:nth-of-type(even) .shot{order:2}
+  .shot{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 50px -36px rgba(20,26,34,.55);background:#fff}
+  .shot img{display:block;width:100%;height:auto}
+  .project h3{font-size:2rem;font-weight:700}
+  .project .kind{color:var(--cobalt);font-weight:600;margin-bottom:10px}
+  .project p{color:#36404C;margin:14px 0 18px;max-width:46ch}
+  .project ul{list-style:none;color:var(--muted);font-size:1rem;margin-bottom:22px}
+  .project li{padding:6px 0;border-top:1px solid var(--line)}
+  .project li:last-child{border-bottom:1px solid var(--line)}
+  .project p.process{font-size:1rem;color:var(--muted);margin:0 0 14px}
+  .project p.process a{color:var(--ink)}
+  .project a.view{font-weight:600;color:var(--cobalt)}
+  @media (max-width:860px){.project{grid-template-columns:1fr;gap:24px}.project:nth-of-type(even) .shot{order:0}}
+
+  section.oss{background:var(--ink);color:#E9EDF2;padding:96px 0}
+  .oss .sec-h{border-color:#E9EDF2}
+  .oss .sec-h p{color:#A9B4C1}
+  .repos{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .repo{border-top:2px solid var(--cobalt-2);padding-top:20px}
+  .repo h3{font-size:1.6rem;font-weight:700}
+  .repo h3 a{text-decoration:none}
+  .repo h3 a:hover{text-decoration:underline;text-underline-offset:5px}
+  .repo p{color:#B8C2CE;margin:10px 0 14px;max-width:48ch}
+  .repo .role{color:#fff;font-weight:600}
+  @media (max-width:760px){.repos{grid-template-columns:1fr}}
+
+  section.how{padding:96px 0}
+  .steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;counter-reset:s}
+  .steps li{counter-increment:s}
+  .steps li::before{content:counter(s);display:block;font-family:var(--head);font-weight:800;font-size:2.4rem;color:var(--cobalt);line-height:1;margin-bottom:12px}
+  .steps strong{display:block;font-size:1.15rem;margin-bottom:6px}
+  .steps span{color:var(--muted);font-size:1rem}
+  @media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+
+  section.contact{padding:0 0 104px}
+  .contact .box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:48px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+  .contact h2{font-size:clamp(1.9rem,3.6vw,2.6rem);font-weight:700}
+  .contact p{color:var(--muted);margin-top:8px}
+  footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:.95rem}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <b>Jean Berrios-Marquez</b>
+    <nav aria-label="Main"><a href="#work">Work</a><a href="#oss">Open source</a><a href="#how">Process</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main>
+<section class="intro">
+  <div class="wrap">
+    <h1>Websites for small businesses, built secure.</h1>
+    <p>I design and build WordPress and Shopify sites for local businesses, and I set them up the way a security person would: updated, backed up, and hardened from day one.</p>
+    <div class="meta">
+      <div><strong>Worcester, MA</strong>Remote or on-site in Central MA</div>
+      <div><strong>English, Spanish, Portuguese</strong>Sites and support in all three</div>
+      <div><strong>U.S. Navy veteran</strong>Google Cybersecurity Certificate</div>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 id="work-title">Example sites</h2>
+      <p>Three concept sites for fictional businesses, each in a different style. Each one has a design system and brand book behind it.</p>
+    </div>
+
+    <article class="project">
+      <a class="shot" href="brasa/"><img src="img/brasa.png" alt="Brasa restaurant homepage with a green hero and an arched 'Tonight from the oven' menu card" width="1440" height="900"></a>
+      <div>
+        <div class="kind">Restaurant</div>
+        <h3>Brasa</h3>
+        <p>A wood-fired kitchen on Shrewsbury Street. The homepage leads with tonight's oven menu, because that's what diners actually come to check.</p>
+        <ul><li>Style: warm and local</li><li>Menu, hours, map and reservations in the first scroll</li><li>Private events inquiry</li></ul>
+        <p class="process">Behind it: <a href="https://github.com/CyberJean98/web-development-portfolio/blob/main/brasa/brand-book.md">Brand book</a>, <a href="https://github.com/CyberJean98/web-development-portfolio/tree/main/brasa/design-system">Design system</a>, <a href="https://github.com/CyberJean98/web-development-portfolio/tree/main/brasa/theme">WordPress theme</a></p>
+        <a class="view" href="brasa/">View the site</a>
+      </div>
+    </article>
+
+    <article class="project">
+      <a class="shot" href="northbound/"><img src="img/northbound.png" alt="Northbound Roofing homepage with a bold headline and a free inspection form" width="1440" height="900"></a>
+      <div>
+        <div class="kind">Contractor</div>
+        <h3>Northbound Roofing</h3>
+        <p>A roofing crew covering 22 Central MA towns. Everything pushes toward one action: book a free inspection or call.</p>
+        <ul><li>Style: clean and professional</li><li>Quote form above the fold and a click-to-call phone in the header</li><li>Service-area list built for local SEO</li></ul>
+        <p class="process">Behind it: <a href="https://github.com/CyberJean98/web-development-portfolio/blob/main/northbound/brand-book.md">Brand book</a>, <a href="https://github.com/CyberJean98/web-development-portfolio/tree/main/northbound/design-system">Design system</a></p>
+        <a class="view" href="northbound/">View the site</a>
+      </div>
+    </article>
+
+    <article class="project">
+      <a class="shot" href="lockline/"><img src="img/lockline.png" alt="Lockline Security homepage with a dark theme and a sample security report panel" width="1440" height="900"></a>
+      <div>
+        <div class="kind">Cybersecurity firm</div>
+        <h3>Lockline Security</h3>
+        <p>Security checks for small offices. The sample report in the hero shows exactly what a client gets, so the service explains itself.</p>
+        <ul><li>Style: technical and dark</li><li>Pricing comparison table</li><li>Trilingual service note for local clients</li></ul>
+        <p class="process">Behind it: <a href="https://github.com/CyberJean98/web-development-portfolio/blob/main/lockline/brand-book.md">Brand book</a>, <a href="https://github.com/CyberJean98/web-development-portfolio/tree/main/lockline/design-system">Design system</a></p>
+        <a class="view" href="lockline/">View the site</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="oss" id="oss" aria-labelledby="oss-title">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 id="oss-title">WordPress security, open source</h2>
+      <p>I contribute to WordPress security plugins built by Jeremy Anderson Tech, where I also do freelance web development.</p>
+    </div>
+    <div class="repos">
+      <div class="repo">
+        <h3><a href="https://github.com/CptNope/JAT-Site-Shield">JAT Site Shield</a></h3>
+        <p>Login lockouts, two-factor codes, core hardening, an activity log with email alerts, and file integrity checks. Free on WordPress.org.</p>
+        <span class="role">My work: Spanish translation and functional testing</span>
+      </div>
+      <div class="repo">
+        <h3><a href="https://github.com/CptNope/JAT-Shell-Scanner">JAT Shell Scanner</a></h3>
+        <p>Checks in about two minutes whether a WordPress site is exposed to, or already compromised by, the 2026 PHP2Shell and wp2shell attacks. Free on WordPress.org.</p>
+        <span class="role">My work: Spanish translation and testing on a local VM site</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="sec-h"><h2 id="how-title">How I work</h2><p>Most small-business sites launch in two to four weeks.</p></div>
+    <ol class="steps">
+      <li><strong>Discovery call</strong><span>20 minutes on your customers, competitors and the one action that makes you money.</span></li>
+      <li><strong>Direction</strong><span>A one-line brief and a style direction you approve before any design.</span></li>
+      <li><strong>Build</strong><span>WordPress or Shopify, with SEO basics and your Google Business Profile matched up.</span></li>
+      <li><strong>Secure launch</strong><span>Updates, backups, a firewall and analytics in place on launch day.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="box">
+      <div><h2 id="contact-title">Need a site that works and stays safe?</h2><p>Tell me about your business. I reply within one business day.</p></div>
+      <a class="btn" href="mailto:jeanberrios53@gmail.com">Email me</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">Jean Berrios-Marquez, Worcester, MA. Example sites are concepts for fictional businesses.</div></footer>
+</body>
+</html>

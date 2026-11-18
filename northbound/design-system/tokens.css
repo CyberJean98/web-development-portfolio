@@ -1,0 +1,43 @@
+/* Northbound Roofing design tokens
+   Source of truth for the HTML example (../index.html) and the WordPress theme (../theme/theme.json).
+   Change a value here, then mirror it in theme.json. */
+
+/* Fonts (loaded by a <link> in the page head / enqueued by the theme):
+   https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Public+Sans:wght@400;500;600&display=swap */
+
+:root{
+  /* Color: core */
+  --slate:#1E2B36;        /* brand dark: top bar, process band, footer */
+  --slate-2:#2D3E4C;      /* hover and borders on dark */
+  --mist:#EEF2F4;         /* hero and recent-jobs background */
+  --line:#D6DEE3;         /* dividers, input borders */
+  --copper:#A9581F;       /* accent: buttons, phone number, prices (5.1:1 on white) */
+  --copper-2:#C26A2C;     /* copper hover, focus ring */
+  --ink:#17212A;          /* body text */
+  --muted:#566673;        /* secondary text (5.9:1 on white) */
+  --white:#FFFFFF;
+
+  /* Type */
+  --head:"Archivo", system-ui, sans-serif;        /* headings at 78% width, weight 800 */
+  --head-stretch:78%;
+  --body:"Public Sans", system-ui, sans-serif;    /* body, forms, buttons */
+  --fs-display:clamp(2.8rem,6.2vw,5rem);
+  --fs-h2:clamp(2.1rem,4vw,3rem);
+  --fs-h3:1.55rem;
+  --fs-phone:1.45rem;      /* header phone number */
+  --fs-lede:1.2rem;
+  --fs-body:1.0625rem;
+  --fs-small:.92rem;
+  --lh-head:1.02; --lh-body:1.6;
+
+  /* Space (8px base) */
+  --space-1:8px; --space-2:16px; --space-3:24px; --space-4:32px;
+  --space-6:48px; --space-8:64px; --space-12:96px;    /* --space-12 = section padding */
+
+  /* Shape */
+  --radius:6px;            /* buttons, inputs */
+  --radius-card:8px;       /* quote form, tables */
+  --border-accent:6px solid var(--copper);   /* top edge of the quote form */
+  --shadow-form:0 18px 40px -24px rgba(30,43,54,.45);
+  --max-width:1180px;
+}

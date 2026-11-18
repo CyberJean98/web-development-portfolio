@@ -1,0 +1,106 @@
+/*
+Theme Name: Brasa
+Theme URI: https://cyberjean98.github.io/web-development-portfolio/brasa/
+Author: Jean Berrios-Marquez
+Author URI: https://cyberjean98.github.io/web-development-portfolio/
+Description: Block theme for Brasa, a wood-fired kitchen (portfolio concept). Warm Local direction: basil green, saffron accent, Young Serif and Work Sans. Built from the Brasa design system and brand book.
+Requires at least: 6.6
+Tested up to: 7.2
+Requires PHP: 7.4
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: brasa
+Tags: block-theme, full-site-editing, one-column, custom-colors, editor-style, block-patterns
+*/
+
+/* Most styling lives in theme.json. This file only holds the signature
+   components that theme.json can't express. Tokens: ../../design-system/tokens.css */
+
+/* Section rhythm */
+.brasa-section { padding-top: var(--wp--preset--spacing--70); padding-bottom: var(--wp--preset--spacing--70); }
+.brasa-section > * { margin-block-start: 0; }
+
+/* Header */
+.brasa-header { padding-top: 14px; padding-bottom: 14px; }
+.brasa-header .wp-block-navigation a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* Hero */
+.brasa-hero .wp-block-columns { gap: 56px; }
+.brasa-hero h1 { margin: 0; }
+.brasa-hero .brasa-lede { max-width: 30ch; margin: 28px 0 36px; color: #DCE3D6; }
+.brasa-hero .brasa-phone { color: #DCE3D6; margin: 0; align-self: center; }
+.brasa-hero .brasa-phone a { color: #fff; font-weight: 600; text-decoration: none; }
+
+/* Signature: the oven card */
+.brasa-oven {
+	position: relative;
+	background: var(--wp--preset--color--paper);
+	color: var(--wp--preset--color--ink);
+	border-radius: 220px 220px 18px 18px;
+	padding: 96px 40px 36px !important;
+}
+.brasa-oven::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 26px;
+	width: 120px;
+	height: 58px;
+	transform: translateX(-50%);
+	background: radial-gradient(ellipse at 50% 100%, #F7C66B 0%, #F2A93B 35%, #C8571F 70%, transparent 72%);
+	border-radius: 120px 120px 0 0;
+}
+.brasa-oven h2 { font-size: var(--wp--preset--font-size--large); text-align: center; margin: 0 0 6px; }
+.brasa-oven .brasa-oven-note { text-align: center; color: var(--wp--preset--color--muted); font-size: var(--wp--preset--font-size--small); margin: 0 0 22px; }
+.brasa-oven .brasa-dish { border-top: 1px solid var(--wp--preset--color--line); padding: 11px 0; margin: 0 !important; }
+
+/* Menu item row: name + description, price (used in oven card and menu) */
+.brasa-dish { gap: 24px; }
+.brasa-dish p { margin: 0; }
+.brasa-dish .brasa-dish-name strong { font-weight: 600; }
+.brasa-dish .brasa-dish-name span { display: block; color: var(--wp--preset--color--muted); font-size: var(--wp--preset--font-size--small); }
+.brasa-dish .brasa-price { font-family: var(--wp--preset--font-family--serif); font-size: 1.15rem; white-space: nowrap; }
+.brasa-menu .brasa-dish { padding: 16px 0; border-bottom: 1px solid var(--wp--preset--color--line); margin: 0 !important; }
+.brasa-menu h3 { padding-bottom: 12px; border-bottom: 2px solid var(--wp--preset--color--basil); margin-bottom: 8px; }
+
+/* Story facts */
+.brasa-facts { gap: 40px; margin-top: 30px !important; }
+.brasa-facts p { color: var(--wp--preset--color--muted); font-size: 0.95rem; margin: 0; }
+.brasa-facts strong { display: block; font-family: var(--wp--preset--font-family--serif); font-weight: 400; font-size: 2.2rem; color: var(--wp--preset--color--basil); }
+
+/* Hours table */
+.brasa-hours table { border-collapse: collapse; }
+.brasa-hours td { border: 0; border-bottom: 1px solid var(--wp--preset--color--line); padding: 10px 0; }
+.brasa-hours td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+.brasa-hours { max-width: 420px; margin-top: 28px !important; }
+
+/* Map */
+.brasa-map { background: var(--wp--preset--color--basil-deep); border-radius: 18px; min-height: 360px; position: relative; overflow: hidden; }
+.brasa-map svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.brasa-map .brasa-pin { position: absolute; left: 54%; top: 46%; transform: translate(-50%, -100%); background: var(--wp--preset--color--saffron); color: var(--wp--preset--color--char); font-weight: 600; padding: 8px 14px; border-radius: 999px; font-size: 0.92rem; }
+
+/* Menu head */
+.brasa-menu > .wp-block-group:first-child { margin-bottom: 48px; }
+.brasa-menu > .wp-block-group:first-child p { max-width: 44ch; margin: 0; }
+.brasa-menu .wp-block-columns { gap: 72px; }
+
+/* Template parts sit flush against the sections */
+.wp-site-blocks > footer, .wp-site-blocks > main { margin-block-start: 0; }
+
+/* Events band */
+.brasa-events p { color: #D9CFC2; max-width: 52ch; }
+
+/* Footer */
+.brasa-footer { font-size: 0.93rem; padding-top: 48px; padding-bottom: 48px; }
+.brasa-footer p { color: #C6D0C2; margin: 0; }
+
+:where(.wp-site-blocks) :focus-visible { outline: 3px solid var(--wp--preset--color--saffron); outline-offset: 3px; }
+
+@media (max-width: 781px) {
+	.brasa-oven { max-width: 460px; padding: 88px 24px 24px !important; }
+	.brasa-menu .wp-block-columns { gap: 48px; }
+	.brasa-hero .wp-block-columns { gap: 40px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+html { scroll-behavior: smooth; }
