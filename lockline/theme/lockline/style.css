@@ -1,0 +1,96 @@
+/*
+Theme Name: Lockline Security
+Theme URI: https://cyberjean98.github.io/web-development-portfolio/lockline/
+Author: Jean Berrios-Marquez
+Author URI: https://cyberjean98.github.io/web-development-portfolio/
+Description: Block theme for Lockline Security (portfolio concept). Technical Dark direction: navy surfaces, amber accent, IBM Plex Sans with Plex Mono for report data only. Built from the Lockline design system and brand book.
+Requires at least: 6.6
+Tested up to: 7.2
+Requires PHP: 7.4
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: lockline
+Tags: block-theme, full-site-editing, one-column, custom-colors, editor-style, block-patterns
+*/
+
+/* Most styling lives in theme.json. This file holds what theme.json can't express.
+   Tokens: ../../design-system/tokens.css */
+
+.wp-site-blocks > main, .wp-site-blocks > footer, main > .wp-block-group { margin-block-start: 0; }
+.ll-section { padding-top: var(--wp--preset--spacing--70); padding-bottom: var(--wp--preset--spacing--70); }
+.ll-section > * { margin-block-start: 0; }
+.ll-band { border-top: 1px solid var(--wp--preset--color--line); border-bottom: 1px solid var(--wp--preset--color--line); }
+:where(.wp-site-blocks) :focus-visible { outline: 3px solid var(--wp--preset--color--amber); outline-offset: 3px; }
+
+/* Header */
+.ll-header { padding-top: 16px; padding-bottom: 16px; }
+.ll-logo { gap: 10px; }
+.ll-logo svg { width: 28px; height: 28px; display: block; }
+.ll-header .wp-block-navigation a:hover { color: var(--wp--preset--color--text); }
+
+/* Hero */
+.ll-hero .wp-block-columns { gap: 64px; }
+.ll-hero h1 { margin: 0; }
+.ll-lede { color: var(--wp--preset--color--soft); max-width: 44ch; margin: 24px 0 34px; }
+.ll-hero .ll-actions { gap: 22px; }
+.ll-hero .ll-actions p { margin: 0; }
+
+/* Signature: the sample report */
+.ll-report { background: var(--wp--preset--color--panel); border: 1px solid var(--wp--preset--color--line); border-radius: 10px; overflow: hidden; font-size: 0.95rem; box-shadow: 0 30px 60px -30px rgba(0,0,0,.6); }
+.ll-report-head { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--wp--preset--color--line); background: var(--wp--preset--color--panel-2); }
+.ll-report-head span { font-family: var(--wp--preset--font-family--mono); font-size: 0.82rem; color: var(--wp--preset--color--soft); }
+.ll-score { display: flex; align-items: center; gap: 18px; padding: 20px; border-bottom: 1px solid var(--wp--preset--color--line); color: var(--wp--preset--color--soft); }
+.ll-score svg { width: 64px; height: 64px; flex: none; }
+.ll-score b { display: block; color: var(--wp--preset--color--text); font-size: 1.05rem; font-weight: 600; }
+.ll-finding { display: grid; grid-template-columns: 72px 1fr; gap: 4px 14px; padding: 15px 20px; border-bottom: 1px solid var(--wp--preset--color--line); }
+.ll-finding:last-child { border-bottom: 0; }
+.ll-finding p { margin: 0; line-height: 1.4; }
+.ll-finding small { grid-column: 2; color: var(--wp--preset--color--soft); font-size: 0.88rem; }
+.ll-sev { font-family: var(--wp--preset--font-family--mono); font-size: 0.78rem; font-weight: 500; padding: 3px 0; border-radius: 3px; text-align: center; height: fit-content; }
+.ll-sev.h { background: rgba(240,123,95,.16); color: var(--wp--preset--color--high); }
+.ll-sev.m { background: rgba(245,184,65,.14); color: var(--wp--preset--color--amber); }
+.ll-sev.l { background: rgba(127,184,214,.14); color: var(--wp--preset--color--sky); }
+
+/* Checks */
+.ll-checks .wp-block-columns { gap: 64px; }
+.ll-check { padding: 22px 0; border-top: 1px solid var(--wp--preset--color--line); margin: 0 !important; }
+.ll-check:last-child { border-bottom: 1px solid var(--wp--preset--color--line); }
+.ll-check h3 { margin: 0 0 6px; }
+.ll-check p { color: var(--wp--preset--color--soft); max-width: 60ch; margin: 0; }
+.ll-intro-text { color: var(--wp--preset--color--soft); max-width: 38ch; }
+
+/* Plans table */
+.ll-tiers { margin-top: 44px !important; }
+.ll-plans > p { margin-top: 14px; max-width: 56ch; }
+.ll-tiers td, .ll-tiers th { overflow-wrap: normal; word-break: normal; hyphens: auto; }
+.ll-tiers table { border-collapse: collapse; table-layout: auto; }
+.ll-tiers th, .ll-tiers td { border: 0; border-bottom: 1px solid var(--wp--preset--color--line); padding: 16px 18px; text-align: left; vertical-align: top; }
+.ll-tiers thead { border-bottom: 0; }
+.ll-tiers thead th { font-size: 1.2rem; font-weight: 600; padding-bottom: 20px; }
+.ll-tiers thead th small { display: block; font-size: 0.95rem; color: var(--wp--preset--color--soft); font-weight: 400; margin-top: 4px; }
+.ll-tiers td:first-child { color: var(--wp--preset--color--soft); width: 28%; }
+.ll-tiers th:nth-child(3) { color: var(--wp--preset--color--amber); }
+.ll-tiers td:nth-child(3), .ll-tiers th:nth-child(3) { background: rgba(245,184,65,.06); }
+.ll-plan-actions { margin-top: 28px !important; gap: 16px; }
+
+/* Who we help */
+.ll-who .wp-block-columns { gap: 40px; margin-top: 40px; }
+.ll-who h3 { padding-top: 16px; border-top: 2px solid var(--wp--preset--color--sky); margin: 0 0 8px; }
+.ll-who p { color: var(--wp--preset--color--soft); margin: 0; }
+
+/* Contact */
+.ll-contact p { color: var(--wp--preset--color--soft); max-width: 52ch; margin: 12px 0 0; }
+.ll-contact h2 { margin: 0; }
+
+/* Footer */
+.ll-footer { border-top: 1px solid var(--wp--preset--color--line); padding-top: 40px; padding-bottom: 40px; font-size: 0.92rem; }
+.ll-footer p { margin: 0; color: var(--wp--preset--color--soft); }
+.ll-footer a { color: var(--wp--preset--color--text); }
+
+@media (max-width: 781px) {
+	.ll-header .wp-block-navigation { display: none; }
+	.ll-tiers th, .ll-tiers td { padding: 12px 6px; font-size: 0.85rem; }
+	.ll-tiers thead th { font-size: 1rem; }
+	.ll-tiers td:first-child { width: auto; }
+}

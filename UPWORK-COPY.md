@@ -35,13 +35,13 @@ Upwork asks for a title, your role, a description, skills, and images or links. 
 
 ### 2. Northbound Roofing: contractor lead-generation site (concept)
 - **Role:** Designer and developer
-- **Description:** A concept site for a roofing company covering 22 Central Massachusetts towns. It's built around one goal, getting inspection requests, using a quote form above the fold, click-to-call in the header, a step-by-step process, and a service-area list that supports local search. Fictional business.
+- **Description:** A concept site for a roofing company covering 22 Central Massachusetts towns. It's built around one goal, getting inspection requests, using a quote form above the fold, click-to-call in the header, a step-by-step process, and a service-area list that supports local search. Includes a design system, a brand book and a WordPress block theme. Fictional business.
 - **Skills:** Web Design, Lead Generation, Landing Page, Local SEO, Conversion Optimization, HTML, CSS
 - **Link:** https://cyberjean98.github.io/web-development-portfolio/northbound/
 
 ### 3. Lockline Security: cybersecurity firm website (concept)
 - **Role:** Designer and developer
-- **Description:** A concept site for a small-business cybersecurity firm. The hero shows a sample security report, so visitors see exactly what they'd get. Includes a pricing comparison table and service notes in three languages. Fictional business.
+- **Description:** A concept site for a small-business cybersecurity firm. The hero shows a sample security report, so visitors see exactly what they'd get. Includes a pricing comparison table and service notes in three languages. Includes a design system, a brand book and a WordPress block theme. Fictional business.
 - **Skills:** Web Design, Cybersecurity, B2B Website, UX Writing, HTML, CSS
 - **Link:** https://cyberjean98.github.io/web-development-portfolio/lockline/
 

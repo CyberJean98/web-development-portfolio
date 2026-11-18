@@ -17,8 +17,8 @@ Each step is the reference for the next one, so the final theme matches the desi
 | Site | Direction | Design system | Brand book | HTML example | WordPress theme |
 | --- | --- | --- | --- | --- | --- |
 | Brasa (restaurant) | Warm Local | [tokens + components](brasa/design-system/) | [brand book](brasa/brand-book.md) | [live](https://cyberjean98.github.io/web-development-portfolio/brasa/) | [block theme](brasa/theme/) ✅ |
-| Northbound Roofing (contractor) | Clean Pro | [tokens + components](northbound/design-system/) | [brand book](northbound/brand-book.md) | [live](https://cyberjean98.github.io/web-development-portfolio/northbound/) | In progress |
-| Lockline Security (cybersecurity) | Technical Dark | [tokens + components](lockline/design-system/) | [brand book](lockline/brand-book.md) | [live](https://cyberjean98.github.io/web-development-portfolio/lockline/) | In progress |
+| Northbound Roofing (contractor) | Clean Pro | [tokens + components](northbound/design-system/) | [brand book](northbound/brand-book.md) | [live](https://cyberjean98.github.io/web-development-portfolio/northbound/) | [block theme](northbound/theme/) ✅ |
+| Lockline Security (cybersecurity) | Technical Dark | [tokens + components](lockline/design-system/) | [brand book](lockline/brand-book.md) | [live](https://cyberjean98.github.io/web-development-portfolio/lockline/) | [block theme](lockline/theme/) ✅ |
 
 All three businesses are fictional. The HTML examples are hand-written HTML and CSS that load their design tokens from `design-system/tokens.css`. They're responsive and keyboard-accessible, and color pairings meet WCAG AA contrast.
 
