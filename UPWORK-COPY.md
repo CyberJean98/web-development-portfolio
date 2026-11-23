@@ -29,21 +29,21 @@ Upwork asks for a title, your role, a description, skills, and images or links. 
 
 ### 1. Brasa: restaurant website (concept)
 - **Role:** Designer and developer
-- **Description:** A concept site for a wood-fired restaurant in Worcester. The homepage leads with tonight's menu in an oven-shaped card, so diners get what they came for right away. Hours, map, reservations and private events all sit within the first few scrolls. Comes with a full design system, a brand book and a working WordPress block theme. Responsive and accessible. Fictional business.
+- **Description:** A concept site for a wood-fired restaurant in Worcester. The homepage leads with tonight's menu in an oven-shaped card, so diners get what they came for right away. Hours, map, reservations and private events all sit within the first few scrolls. Comes with a design system, brand book, WordPress block theme, and privacy, terms and accessibility pages (WCAG 2.1 AA, 0 axe-core violations). Responsive and accessible. Fictional business.
 - **Skills:** Web Design, Restaurant Website, Responsive Design, HTML, CSS, Local SEO
-- **Link:** https://cyberjean98.github.io/web-development-portfolio/brasa/
+- **Link:** https://cyberjean98.github.io/brasa-restaurant/
 
 ### 2. Northbound Roofing: contractor lead-generation site (concept)
 - **Role:** Designer and developer
 - **Description:** A concept site for a roofing company covering 22 Central Massachusetts towns. It's built around one goal, getting inspection requests, using a quote form above the fold, click-to-call in the header, a step-by-step process, and a service-area list that supports local search. Includes a design system, a brand book and a WordPress block theme. Fictional business.
 - **Skills:** Web Design, Lead Generation, Landing Page, Local SEO, Conversion Optimization, HTML, CSS
-- **Link:** https://cyberjean98.github.io/web-development-portfolio/northbound/
+- **Link:** https://cyberjean98.github.io/northbound-roofing/
 
 ### 3. Lockline Security: cybersecurity firm website (concept)
 - **Role:** Designer and developer
 - **Description:** A concept site for a small-business cybersecurity firm. The hero shows a sample security report, so visitors see exactly what they'd get. Includes a pricing comparison table and service notes in three languages. Includes a design system, a brand book and a WordPress block theme. Fictional business.
 - **Skills:** Web Design, Cybersecurity, B2B Website, UX Writing, HTML, CSS
-- **Link:** https://cyberjean98.github.io/web-development-portfolio/lockline/
+- **Link:** https://cyberjean98.github.io/lockline-security/
 
 ### 4. JAT Site Shield and JAT Shell Scanner: WordPress security plugins
 - **Role:** Contributor (Spanish localization and QA)

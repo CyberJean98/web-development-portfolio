@@ -4,16 +4,37 @@ The taste layer that comes before every build. Taste decides what a site should 
 
 ## Pipeline (per client)
 
-| Step | Output | Where it lives in this repo |
+| Step | Output | Where it lives |
 | --- | --- | --- |
-| 1. Discovery and taste | One-line brief + style direction | This playbook |
-| 2. Design system | Tokens and components | `<site>/design-system/` |
-| 3. Brand book | Voice, logo, color and type rules | `<site>/brand-book.md` |
+| 1. Discovery and taste | One-line brief + style direction | This playbook (and the design-taste Claude skill) |
+| 2. Design system | Tokens and components | `design-system/` in the site's repo |
+| 3. Brand book | Voice, logo, color and type rules | `brand-book.md` |
 | 4. Design panels (optional) | Key-screen mockups | — |
-| 5. HTML example | A working reference page | `<site>/index.html` |
-| 6. Theme | WordPress block theme | `<site>/theme/` |
+| 5. HTML example | A working reference page | `index.html` |
+| 6. Theme | WordPress block theme | `theme/` |
+| 7. Compliance | Privacy policy, terms, accessibility statement | `privacy/`, `terms/`, `accessibility/` |
 
-Each step is the reference for the next one. With all of them in the repo, generating the theme becomes much more accurate.
+Each step is the reference for the next one. With all of them in the repo, generating the theme becomes much more accurate. Each client site gets its own repo.
+
+## Tools in the workflow
+
+- **Design taste (this playbook):** decides what the site should feel like and why.
+- **[Taste Skill](https://www.tasteskill.dev):** art direction from a library of curated sites, plus a checker that opens the page in a real browser and flags generic layouts, weak headings, missing visuals and copy clichés. Install per project with `npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"` (Node 22+ and Chrome). Review it first: it adds a Stop hook that runs its checker every time the agent finishes.
+- **[Impeccable](https://impeccable.style):** build quality: type, spacing, motion, anti-patterns.
+- **axe-core:** accessibility testing. Every page must pass WCAG 2.1 AA with 0 violations before launch.
+
+## Compliance checklist (every client site)
+
+Modeled on [jeremyanderson.tech](https://jeremyanderson.tech).
+
+- [ ] **Privacy policy** written for how the site actually works: what's collected, why, who processes it, retention, and rights (GDPR for EU/UK visitors, CCPA for California, deletion requests answered within 30 days)
+- [ ] **No data leaks by default:** self-host fonts, no analytics without a privacy-friendly choice and a policy update, no embedded maps or videos that track visitors. If cookies are ever needed, add consent first.
+- [ ] **Forms** say how the data will be used and link to the privacy policy
+- [ ] **Terms of service:** Massachusetts governing law, consumer rights under Chapter 93A preserved, quotes and prices clearly non-binding until written
+- [ ] **Accessibility statement:** WCAG 2.1 AA target, what was done, known limitations, how to report a barrier (reply within 5 business days)
+- [ ] **Accessibility build:** skip link, landmarks, visible focus, labeled fields, 4.5:1 contrast, reduced motion, 200% zoom
+- [ ] Footer links to Privacy, Terms and Accessibility on every page
+- [ ] Have the client review legal pages; templates aren't legal advice
 
 ## Core taste principles
 
@@ -39,7 +60,7 @@ Each step is the reference for the next one. With all of them in the repo, gener
 | Technical Dark | Precise, secure | Sans headlines, mono for data only | Navy/charcoal, one bright accent | Neon, hacker clichés |
 | Soft Modern | Calm, approachable | Rounded geometric sans | Light tints, one hue | Low-contrast text |
 
-The examples in this repo are Brasa (Warm Local), Northbound Roofing (Clean Pro) and Lockline Security (Technical Dark).
+The examples are [Brasa](https://github.com/CyberJean98/brasa-restaurant) (Warm Local), [Northbound Roofing](https://github.com/CyberJean98/northbound-roofing) (Clean Pro) and [Lockline Security](https://github.com/CyberJean98/lockline-security) (Technical Dark).
 
 ## Client discovery questions
 

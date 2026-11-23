@@ -1,52 +1,45 @@
 # Web Development Portfolio: Jean Berrios-Marquez
 
-Websites for small businesses, built secure.
+Websites for small businesses, built secure. This repo is the hub: the landing page, the design taste playbook, and links to each concept site's own repo.
 
-**Live site:** https://cyberjean98.github.io/web-development-portfolio/
-
-This repo shows the full process behind each site, not just the finished page. Every concept site follows the same pipeline:
-
-```
-Design taste → Design system → Brand book → HTML example → WordPress theme
-```
-
-Each step is the reference for the next one, so the final theme matches the design decisions exactly.
+**Live portfolio:** https://cyberjean98.github.io/web-development-portfolio/
+**Hire me:** https://cyberjean98.github.io/web/
 
 ## Concept sites
 
-| Site | Direction | Design system | Brand book | HTML example | WordPress theme |
-| --- | --- | --- | --- | --- | --- |
-| Brasa (restaurant) | Warm Local | [tokens + components](brasa/design-system/) | [brand book](brasa/brand-book.md) | [live](https://cyberjean98.github.io/web-development-portfolio/brasa/) | [block theme](brasa/theme/) ✅ |
-| Northbound Roofing (contractor) | Clean Pro | [tokens + components](northbound/design-system/) | [brand book](northbound/brand-book.md) | [live](https://cyberjean98.github.io/web-development-portfolio/northbound/) | [block theme](northbound/theme/) ✅ |
-| Lockline Security (cybersecurity) | Technical Dark | [tokens + components](lockline/design-system/) | [brand book](lockline/brand-book.md) | [live](https://cyberjean98.github.io/web-development-portfolio/lockline/) | [block theme](lockline/theme/) ✅ |
-
-All three businesses are fictional. The HTML examples are hand-written HTML and CSS that load their design tokens from `design-system/tokens.css`. They're responsive and keyboard-accessible, and color pairings meet WCAG AA contrast.
-
-## Repo layout
+Each site lives in its own repo and is built the same way:
 
 ```
-├── index.html              Portfolio landing page
-├── playbook/               Design taste playbook (directions, discovery, checklist)
-├── img/                    Screenshots used on the landing page
-└── <site>/
-    ├── design-system/      tokens.css + README (colors, type, spacing, components)
-    ├── brand-book.md       Voice, logo, color and type rules, do's and don'ts
-    ├── index.html          HTML example (the live page)
-    └── theme/              WordPress block theme (folder + installable .zip)
+Design taste → Design system → Brand book → HTML example → WordPress theme → Privacy, terms & accessibility
 ```
 
-## WordPress themes
+| Site | Direction | Live | Repo |
+| --- | --- | --- | --- |
+| Brasa (restaurant) | Warm Local | [Site](https://cyberjean98.github.io/brasa-restaurant/) | [brasa-restaurant](https://github.com/CyberJean98/brasa-restaurant) |
+| Northbound Roofing (contractor) | Clean Pro | [Site](https://cyberjean98.github.io/northbound-roofing/) | [northbound-roofing](https://github.com/CyberJean98/northbound-roofing) |
+| Lockline Security (cybersecurity) | Technical Dark | [Site](https://cyberjean98.github.io/lockline-security/) | [lockline-security](https://github.com/CyberJean98/lockline-security) |
 
-The themes are full-site-editing block themes. Colors, fonts and spacing come from the design system, set in `theme.json`. Fonts are self-hosted (no Google Fonts calls). Every homepage section is an editable block pattern.
+Every repo includes:
+- A **design system** (tokens and components, with contrast checks) and a **brand book**
+- A **hand-built HTML example** driven by the design tokens, with **self-hosted fonts** (no Google Fonts, so no visitor data goes to a third party)
+- A **WordPress block theme** tested on WordPress 7.2, with an installable zip
+- A **privacy policy** (GDPR, CCPA), **terms of service** and **accessibility statement** (WCAG 2.1 AA), modeled on [jeremyanderson.tech](https://jeremyanderson.tech). Every page passes axe-core checks with 0 violations.
+- A `CLAUDE.md` with the rules an AI agent follows in that repo, and a pinned [Taste Skill](https://www.tasteskill.dev) install
 
-To try one: in WordPress, go to Appearance → Themes → Add New → Upload Theme and choose `<site>/theme/<site>.zip`. Or copy the theme folder into `wp-content/themes/` in Local WP.
+All three businesses are fictional.
+
+## Tooling
+
+| Tool | Role |
+| --- | --- |
+| [Design taste playbook](playbook/) and its Claude skill | Direction, discovery questions, taste review |
+| [Taste Skill](https://www.tasteskill.dev) (`design-taste-frontend`) | Art direction and real-browser checks for AI-built pages |
+| [Impeccable](https://impeccable.style) | Build-level critique, audit and polish |
+| [axe-core](https://github.com/dequelabs/axe-core) | Automated WCAG 2.1 AA testing |
 
 ## Open-source WordPress security work
 
-- [JAT Site Shield](https://github.com/CptNope/JAT-Site-Shield): Spanish translation and testing
-- [JAT Shell Scanner](https://github.com/CptNope/JAT-Shell-Scanner): Spanish translation and testing
-
-Both are free on WordPress.org, by Jeremy Anderson Tech.
+- [JAT Site Shield](https://github.com/CptNope/JAT-Site-Shield) and [JAT Shell Scanner](https://github.com/CptNope/JAT-Shell-Scanner): Spanish translations (650+ strings) shipped in official releases; credited contributor on WordPress.org
 
 ## Contact
 
