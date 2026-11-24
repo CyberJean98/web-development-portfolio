@@ -43,4 +43,4 @@ All three businesses are fictional.
 
 ## Contact
 
-jeanberrios53@gmail.com · Worcester, MA · English, Spanish, Portuguese
+[jean.berrios@jeremyanderson.tech](mailto:jean.berrios@jeremyanderson.tech) · [LinkedIn](https://www.linkedin.com/in/jean-berrios-marquez-2617a73b2) · [GitHub](https://github.com/CyberJean98) · Worcester, MA · English, Spanish, Portuguese
